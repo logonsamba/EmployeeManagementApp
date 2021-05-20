@@ -1,0 +1,25 @@
+﻿@page
+@model EmployeeManagement.Web.Pages.Department.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Department List</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dept in Model.DepartmentList)
+        {
+            <tr>
+                <th scope="row">@dept.Id</th>
+                <td>@dept.DepartmentName</td>
+            </tr>
+        }
+    </tbody>
+</table>
